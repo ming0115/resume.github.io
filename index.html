@@ -1,1 +1,428 @@
-测试一下
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>杨明——前端开发</title>
+<meta name="keywords" content="关键字,关键字,关键字" />
+<meta name="description" content="描述。……" />
+<!-- 让 IE 浏览器运行最新的渲染模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--让部分国产浏览器默认采用高速模式渲染页面，目前只有360浏览器支持标签。-->
+<meta name="renderer" content="webkit">
+<link rel="stylesheet" href="css/reveal.css">
+<link rel="stylesheet" href="css/black.css">
+<!--[if lte IE 9]><script type="text/javascript" src="js/html5.js"></script><![endif]-->
+<style type="text/css">
+.tal{text-align:left;}
+html .maa{margin:0 auto;}
+.w230{width:250px;}
+.w240{width:240px;}
+.w320{width:320px;}
+.w400{width:400px;}
+.w600{width:600px;}
+.w650{width:650px;}
+.w660{width:660px;}
+.w670{width:670px;}
+.w800{width:800px;}
+.w1000{width:1000px;}
+.w1100{width:1100px;}
+.w1220{width:1220px;}
+.reveal .lh1 p{line-height:1;font-size:80%}
+.reveal ul{list-style:none;margin:0;}
+.reveal li{list-style:none;}
+.reveal table td{vertical-align: middle;}
+.fc-red{color:#c00;}
+.reveal .skill em{color:#333;font-style:normal;}
+.fl{float:left;}
+.fr{float:right;}
+.works-container-l{width:35%;}
+.works-container-r{width:60%;}
+.reveal .works-container li{cursor:pointer;-webkit-transition:all 0.5s ease;transition:all 0.5s ease;font-size:80%;}
+.reveal .works-container li:hover{color:rgba(3,3,3,1);}
+.reveal .evaluate p{font-size:80%;}
+
+ body{background:rgba(51,133,220,1);} 
+/* body{background:url(imgs/bg.jpg) no-repeat center top;}  */
+.popup{width:80%;position:fixed;z-index:999;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);background:#fff;height:90%;min-width:800px;display:none;}
+.popup .btn-close{background:url(imgs/btn-close.png) no-repeat center top;width:24px;height:24px;position:absolute;z-index:10;right:10px;top:10px;display:block;}
+.popup dl{padding:3% 0 0;width:90%;margin:0 auto;}
+.popup dt{line-height:2;font-size:2.2rem;}
+.popup dd{margin:0;font-size:1.6rem;line-height:1.4;}
+.popup dd .small-tit{display:block;}
+.popup dd em{color:#000;font-style:normal;font-weight:bold;}
+.popup dd .link{color:rgba(51,133,220,1);text-decoration:none;font-weight:bold;margin-right:20px;}
+.popup dd .link:hover{text-decoration: underline;}
+.popup dd .btn-qrcode{color:rgba(51,133,220,1);font-weight:bold;cursor:pointer;}
+.popup dd .btn-qrcode:hover{text-decoration: underline;}
+.popup .qrcode-wrap{width:300px;height:300px;background:#000;position:absolute;z-index:10;left:50%;bottom:10%;-webkit-transform:translateX(-50%);transform:translateX(-50%);display:none;}
+
+</style>
+<script type="text/javascript">
+var browser = {
+    versions: function () {
+        var u = navigator.userAgent;
+        return {
+            computer: !(/(iPhone|iPad|iPod|Android)/i).test(u), //
+            mobile: /(iPhone|iPad|iPod|Android)/i.test(u)
+        }
+    }()
+};
+(function(win,browser){
+	var version=browser.versions;
+	setTimeout(function(){
+		var u= navigator.userAgent.toLowerCase();
+		var isIE = u.indexOf("msie")>-1;
+		var reveal = document.getElementById('J-reveal');
+		var tip = document.getElementById('J-tip');
+		if(isIE){
+			var browserVersion = u.match(/msie ([\d.]+)/)[1];
+			if(browserVersion <10.0){
+				reveal.innerHTML = '您使用的浏览器版本过低，请使用现代浏览器如chrome、360高速或极速模式查看，点击<a href ="http://rj.baidu.com/soft/detail/14744.html?ald">此处</a>下载chrome，点击<a href="http://se.360.cn/">此处</a>下载360浏览器最新版';
+				//alert('您的浏览器版本过低，请使用现代浏览器如chrome、360高速模式查看');
+				return;
+			}
+		}
+		if(version.mobile==true){
+			tip.innerHTML = '请用手指左右滑动屏幕查看';
+			return;
+		}
+		if(version.computer==true){
+			tip.innerHTML = '请使用键盘左右方向键或鼠标滚轮查看';
+			return;
+		}
+	},500);
+
+})(window,browser);
+</script>
+</head>
+<body>
+<main class="reveal" id="J-reveal">
+	<div class="slides">
+		<section data-transition="zoom">
+			<h2>杨明—前端开发</h2>
+			<p class="tip" id="J-tip"></p>
+		</section>
+		<section>
+			<h2>基本信息</h2>
+			<div class="tal maa w650">
+				<p>
+					性别：男
+				</p>
+				<p>
+					应聘职位：前端开发
+				</p>
+				<p>
+					学历：本科
+				</p>
+				<p>
+					专业：信息与计算科学
+				</p>
+				<p>
+					工作年限：五年以上前端工作经验
+				</p>
+			</div>
+		</section>
+		<section>
+			<h2>职业技能</h2>
+			<div class="tal maa w1000 lh1 skill" id="J-skill">
+				<p>
+				(1)熟练掌握<em>HTML</em>、<em>CSS3</em>、<em>LESS</em>和<em>Javascript</em>；
+				</p>
+				<p>
+				(2)熟练掌握但可不依赖<em>jQuery</em>、<em>Zepto</em>；
+				</p>
+				<p>
+				(3)高效完成PC和移动端页面制作；
+				</p>
+				<p>
+				(4)了解<em>requireJS</em>、<em>Gulp</em>和<em>Webpack</em>应用；
+				</p>
+				<p>
+				(5)有HTML5游戏框架<em>Phaser.js</em>的使用经验，对canvas有一定实践经验；
+				</p>
+				<p>
+				(6)对浏览器兼容问题解决和性能优化有丰富经验；
+				</p>
+				<p>
+				(7)对<em>Vue.js</em>框架应用有一定了解；
+				</p>
+				<p>
+				(8)熟练掌握多种热门插件如<em>modernizr</em>、<em>swiper.js</em>、<em>iscroll.js</em>、<em>fullPage.js</em>、<em>wow.js</em>等；
+				</p>
+				<p>
+				(9)了解<em>PHP</em>、<em>MySQL</em>和<em>phpMyAdmin</em>并有实践经验；
+				</p>
+			</div>
+		</section>
+		<section>
+			<h2>工作经历</h2>
+			<div class="w1220">
+				<table width="100%" cellspacing="0" cellpadding="0" border="0">
+					<tr>
+						<th class="w320">工作时间</th>
+						<th class="w240">公司名称</th>
+						<th class="w660">工作内容</th>
+					</tr>
+					<tr>
+						<td>2011年7月至今</td>
+						<td>太平洋网络</td>
+						<td>
+							<ul>
+								<li>
+									1	项目的前期需求沟通；
+								</li>
+								<li>
+									2	评估项目可行性和所需时间等；
+								</li>
+								<li>
+									3	为需求方提供解决方案建议；
+								</li>
+								<li>
+									4 组内工作安排协调和管理；
+								</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+
+		<section id="J-works-wrap">
+			<h2>个人作品</h2>
+			<p>
+				以下为个人的一些作品，可点击标题查看详情
+			</p>
+			<p>
+				<div class="works-container works-container-l fl">
+					<h3>PC作品</h3>
+					<ul id="J-works-list-pc"></ul>
+				</div>
+				<div class="works-container works-container-r fr">
+					<h3>移动端作品</h3>
+					<ul id="J-works-list-wap"></ul>
+				</div>
+			</p>
+		</section>
+
+		<section>
+			<h2>自我评价</h2>
+			<div class="tal w800 maa evaluate">
+				<p>
+					1.学习领悟能力较强，工作认真负责,做事细心有条理；
+				</p>
+				<p>
+					2.长期辅导新人和与编辑销售沟通需求，有耐心和良好的沟通协调能力；
+				</p>
+				<p>
+					3.热衷学习使用新技术并应用到实际工作中，持续关注前沿技术和技术类网站
+				</p>
+				<p>
+					4. 善于在实践工作中做好笔记，不断提高自己的技能；
+				</p>
+			</div>
+		</section>
+
+		<section>
+			<h2>杨明的联系方式</h2>
+			<p>
+				联系电话：13560359870
+			</p>
+			<p>
+				QQ：597771658
+			</p>
+			<p>
+				Email：gddel@qq.com
+			</p>
+		</section>
+
+		<section data-transition="zoom">
+			<p>
+				感谢花费宝贵时间看完，辛苦了！
+			</p>
+		</section>
+	</div>
+</main>
+<div class="popup popup-work" id="J-popup-work">
+	<a href="javascript:" class="btn-close"></a>
+	<dl>
+		<dt></dt>
+		<dd>
+			<span class="small-tit">说明：</span>
+			<div class="desc"></div>
+		</dd>
+		<dd>
+			<a href="" target="_blank" class="link">点击查看链接</a><span class="btn-qrcode" id="J-btn-qrcode">扫二维码查看效果（鼠标经过弹出）</span>
+		</dd>
+	</dl>
+	<div class="qrcode-wrap" id="J-qrcode-wrap"></div>
+</div>
+
+<!--[if lt IE 9]><script src="js/ieBetter.js" type="text/javascript"></script><![endif]-->
+<!--[if lte IE 10]>
+<script src="js/classList.min.js" type="text/javascript"></script>
+<![endif]-->
+<script src="js/reveal.js"></script>
+<script src="js/works.js" type="text/javascript"></script>
+<script src="js/qrcode.js" type="text/javascript"></script>
+<script type="text/javascript">
+(function(){
+	var qrcodeObj;
+	var module = {
+		setReveal : function(){
+			Reveal.initialize({
+				// 是否在右下角展示控制条
+				controls: true,
+				// 是否显示演示的进度条
+				progress: true,
+				// 是否显示当前幻灯片的页数
+				slideNumber: 'c/t',
+				// 是否将每个幻灯片改变加入到浏览器的历史记录中去
+				history: false,
+				// 是否启用键盘快捷键来导航
+				keyboard: true,
+				// 是否启用幻灯片的概览模式,开启后，可以使用ESC键查看幻灯片概览
+				overview: true,
+				// 是否将幻灯片垂直居中
+				center: true,
+				// 是否在触屏设备上启用触摸导航
+				touch: true,
+				// 是否循环演示
+				loop: false,
+				// 是否将演示的方向变成 RTL
+				rtl: false,
+				// 全局开启和关闭碎片
+				fragments: true,
+				// 标识演示文稿是否在嵌入模式中运行，即包含在屏幕的有限部分中的
+				embedded: false,
+				// 标识当问号键被点击的时候是否应该显示一个帮助的覆盖层
+				help: true,
+				//  两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+				autoSlide: 0,
+				// 当遇到用户输入的时候停止切换
+				autoSlideStoppable: true,
+				// 是否启用通过鼠标滚轮来导航幻灯片
+				mouseWheel: true,
+				//  是否在移动设备上隐藏地址栏
+				hideAddressBar: true,
+				// 是否在一个弹出的 iframe 中打开幻灯片中的链接
+				previewLinks: false,
+				// 切换过渡效果
+				transition: 'default', // none/fade/slide/convex/concave/zoom
+				// 过渡速度
+				transitionSpeed: 'default', // default/fast/slow
+				// 全屏幻灯片背景的过渡效果
+				backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+				// 除当前可见的之外的幻灯片数量
+				viewDistance: 3,
+				// 视差背景图片
+				parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+				// 视差背景尺寸
+				parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+				// 移动视差背景（水平和垂直）滑动变化的数量, 例如100
+				parallaxBackgroundHorizontal: '',
+				parallaxBackgroundVertical: '',
+				width: 1220,
+				height:700
+			});
+		},
+		setSkillFont : function(){
+			if(browser.versions.computer==true){
+				var skill = document.getElementById('J-skill');
+				skill.style.fontSize = '80%';
+			}
+		},
+		getWorks : function(){
+			var worksPc = '';
+			var worksWap = '';
+			var worksListPc = document.getElementById('J-works-list-pc');
+			var worksListWap = document.getElementById('J-works-list-wap');
+			for(var i=0,len=worksData.length;i<len;i++){
+				(function(t){
+					if(worksData[t].type == 1){
+						worksPc += '<li data-workId ="'+worksData[i].id+'">'+worksData[i].name+'</li>';
+					}else{
+						worksWap += '<li data-workId ="'+worksData[i].id+'">'+worksData[i].name+'</li>';
+					}
+				})(i);
+			}
+			worksListPc.innerHTML = worksPc;
+			worksListWap.innerHTML = worksWap;
+
+			var allWorks = document.querySelectorAll('#J-works-wrap li');
+			for(var i=0,len=allWorks.length;i<len;i++){
+			    (function(t){
+			    	allWorks[t].addEventListener('click',function(){
+			    		var workId = allWorks[t].getAttribute('data-workId');
+			    		module.showDetail(t);
+			    	},false);
+			    })(i);
+			}
+		},
+		showDetail : function(index){
+			var popup = document.getElementById('J-popup-work');
+			var titWrap = popup.querySelector('dt');
+			var descWrap = popup.querySelector('.desc');
+			var linkWrap = popup.querySelector('.link');
+			var btnQrcode = document.getElementById('J-btn-qrcode');
+			var qrCodeWrap = document.getElementById('J-qrcode-wrap');
+			btnQrcode.style.display = 'inline';
+			popup.style.display = 'block';
+			titWrap.innerHTML = worksData[index].name;
+			descWrap.innerHTML = worksData[index].desc;
+			linkWrap.setAttribute('href',worksData[index].link);
+			if(worksData[index].type == 2){
+				//qrCodeWrap.innerHTML = '';
+				this.setQrcode(worksData[index].link);
+			}else{
+				btnQrcode.style.display = 'none';
+			}
+		},
+		hideDetail : function(){
+			var popup = document.getElementById('J-popup-work');
+			var titWrap = popup.querySelector('dt');
+			var descWrap = popup.querySelector('.desc');
+			var linkWrap = popup.querySelector('.link');
+			var qrCodeWrap = document.getElementById('J-qrcode-wrap');
+			popup.style.display = 'none';
+			titWrap.innerHTML = '';
+			descWrap.innerHTML = '';
+			linkWrap.setAttribute('href','');
+			//qrCodeWrap.innerHTML = '';
+		},
+		qrCodeInit : function(){
+			qrcodeObj = new QRCode(document.getElementById("J-qrcode-wrap"), {
+				width : 300,//设置宽高
+				height : 300
+			});
+		},
+		setQrcode : function(url){
+			qrcodeObj.makeCode(url);
+		},
+		qrCodeCtrl : function(){
+			var btnQrcode = document.getElementById('J-btn-qrcode');
+			var qrCodeWrap = document.getElementById('J-qrcode-wrap');
+			btnQrcode.addEventListener('mouseover',function(){
+				qrCodeWrap.style.display = 'block';
+			});
+			btnQrcode.addEventListener('mouseout',function(){
+				qrCodeWrap.style.display = 'none';
+			});
+		},
+		init : function(){
+			this.setReveal();
+			this.getWorks();
+			this.qrCodeCtrl();
+			this.qrCodeInit();
+
+			var btnClose = document.querySelector('#J-popup-work .btn-close');
+			btnClose.addEventListener('click',function(){
+				module.hideDetail();
+			});
+		}
+	}
+	module.init();
+})();
+
+</script>
+</body>
+</html>
