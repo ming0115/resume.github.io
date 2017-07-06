@@ -31,15 +31,28 @@ var comm = {
 		}
 	},
 	hasClass : function(obj, cls) {
-		return obj.classList.contains(cls);
+		if(obj.classList){
+			return obj.classList.contains(cls);
+		}else{
+			return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+		}
 	},
 	addClass : function(obj, cls) {
 		if (this.hasClass(obj, cls)) return;
-		obj.classList.add(cls);
+		if(obj.classList){
+			obj.classList.add(cls);
+		}else{
+			obj.className += " " + cls;
+		}
 	},
 	removeClass : function(obj,cls){
 		if (!this.hasClass(obj, cls))  return;
-		obj.classList.remove(cls);
+		if(obj.classList){
+			obj.classList.remove(cls);
+		}else{
+			var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+			obj.className = obj.className.replace(reg, '');
+		}
 	},
 	getClientH : function(){
 		var clientH = document.documentElement.clientHeight;
