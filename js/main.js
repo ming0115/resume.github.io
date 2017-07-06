@@ -5,14 +5,13 @@
 		curPage : 0,
 		autoPlay : false,
 		Timer : null,
-		qrcodeInit : function(){
-			qrcodeObj = new QRCode(comm.getById("J-qrcode"), {
-				width : 160,//设置宽高
-				height : 160
+		setQrcode : function(tar,url,w,h){
+			$(tar).qrcode({
+				render: "table", 
+				width: w || 160,
+				height:h ||160, 
+				text: url
 			});
-		},
-		setQrcode : function(url){
-			qrcodeObj.makeCode(url);
 		},
 		qrcodeShow : function(url){
 			var mask = comm.getById('J-mask');
@@ -21,11 +20,12 @@
 			mask.style.height = sHeight + 'px';
 			mask.style.display = 'block';
 			qrcode.style.display = 'block';
-			this.setQrcode(url);
+			this.setQrcode('#J-qrcode',url);
 		},
 		qrcodeHide : function(){
 			var mask = comm.getById('J-mask');
 			var qrcode = comm.getById('J-qrcode-wrap');
+			comm.getById('J-qrcode').innerHTML = '';
 			qrcode.style.display = 'none';
 			mask.style.display = 'none';
 		},
@@ -40,8 +40,8 @@
 				startingPage:0,              
 				pageNumbers: false,       
 				easing:  'easeInOutElastic',          
-				easeIn:  'easeInElastic', 
-				easeOut: 'easeOutElastic',  
+				//easeIn:  'easeInElastic', 
+				//easeOut: 'easeOutElastic',  
 				closed: true,         
 				create : function(){
 
@@ -167,8 +167,6 @@
 			comm.addEvent(btnClose,'click',function(){
 				module.qrcodeHide();
 			});
-			//初始化
-			this.qrcodeInit();
 			//设置
 			var btnViews = comm.getByClass('btn-view','J-works-wrap');
 			if(btnViews.length>1){
@@ -190,5 +188,6 @@
 			/* 二维码控制 E */
 		}
 	}
-	module.init();
+	window.module = module;
+	//module.init();
 })();
