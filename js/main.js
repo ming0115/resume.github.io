@@ -5,6 +5,12 @@
 		curPage : 0,
 		autoPlay : false,
 		Timer : null,
+		loadingHide : function(){
+			var mask = comm.getById('J-mask');
+			var popLoading = comm.getById('J-popup-loading');
+			mask.style.display = 'none';
+			popLoading.style.display = 'none';
+		},
 		setQrcode : function(tar,url,w,h){
 			$(tar).qrcode({
 				render: "table", 
@@ -112,6 +118,7 @@
 
 			/* 侧栏导航 S */
 			var navItems = comm.getByTagName('li','J-side-nav');
+			comm.addClass(navItems[0],'first');
 			comm.addClass(navItems[0],'cur');
 			for(var i=0,len=navItems.length;i<len;i++){
 				(function(t){
@@ -132,6 +139,7 @@
 			/* 查看按钮 E */
 		},
 		init : function(){
+
 			/* 翻页 S */
 			this.setBook();
 			/* 翻页 E */
