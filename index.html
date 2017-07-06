@@ -206,8 +206,10 @@
 <script type="text/javascript">
 var contBg = new Image();
 contBg.onload = function() {
-	module.loadingHide();
-	module.init();
+	setTimeout(function(){
+		module.loadingHide();
+		module.init();
+	},500);
 };
 contBg.src = 'imgs/cont-bg.jpg';
 </script>
