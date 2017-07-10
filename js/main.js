@@ -182,7 +182,8 @@
 					(function(t){
 						comm.addEvent(btnViews[t],'click',function(){
 							var link = this.getAttribute('data-link');
-							alert(link);
+							//alert(link);
+							module.qrcodeShow(link);
 						});
 					})(i);
 				}

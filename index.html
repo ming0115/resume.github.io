@@ -71,10 +71,10 @@
 					<h2>职业技能</h2>
 					<ul class="skill-wrap">
 						<li>
-						(1)熟练掌握HTML、CSS3、SASS、LESS、Javascript
+						(1)熟练掌握HTML5、CSS3、SASS、LESS，100%还原设计稿，熟悉响应式页面开发
 						</li>
 						<li>
-						(2)熟练掌握Webpack、Gulp、Babel、LiveReload等各种前端自动化工具插件
+						(2)熟练掌握Javascript、Ajax前后端分离开发模式和Webpack、Gulp、Babel、LiveReload等各种前端自动化工具插件
 						</li>
 						<li>
 						(3)熟练掌握jQuery、Zepto、Swiper、Iscroll等常用javascript库和插件
@@ -86,7 +86,7 @@
 						(5)了解ES6常用语法和页面渲染原理，对pc和移动端平台兼容和性能优化、调试都有丰富经验
 						</li>
 						<li>
-						(5)熟悉HTML5游戏框架Phaser.js开发，对canvas开发有实践经验
+						(5)熟悉HTML5游戏框架Phaser.js开发，对canvas、PHP开发有实践经验
 						</li>
 					</ul>
 				</section>
@@ -204,6 +204,19 @@
 <script src="js/jquery.qrcode.min.js" type="text/javascript"></script>
 <script src="js/main.js?t=20170701" type="text/javascript"></script>
 <script type="text/javascript">
+/* if IE7 S */
+var ua=navigator.userAgent.toLowerCase();
+var isIE = ua.indexOf("msie")>-1;
+if(isIE){
+	browserVersion = ua.match(/msie ([\d.]+)/)[1];
+	if(browserVersion<10){
+		var btnView = comm.getById('J-btn-view');
+		btnView.style.display = 'block';
+	}
+}
+/* if IE7 E */
+
+/* loading-hide S */
 var contBg = new Image();
 contBg.onload = function() {
 	setTimeout(function(){
@@ -212,6 +225,7 @@ contBg.onload = function() {
 	},500);
 };
 contBg.src = 'imgs/cont-bg.jpg';
+/* loading-hide E */
 </script>
 </body>
 </html>
