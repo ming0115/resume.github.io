@@ -18,7 +18,27 @@
 <!--[if lte IE 8]>
 <script type="text/javascript" src="js/html5.js"></script>
 <![endif]-->
+<script type="text/javascript">
+var browser = {
+	versions: function () {
+		var u = navigator.userAgent,
+				app = navigator.appVersion;
+		return {
+			computer: !(/(iPhone|iPad|iPod|Android)/i).test(u), 
+			mobile: /(iPhone|iPad|iPod|Android)/i.test(u)
+		}
+	}()
+};
 
+(function(win,browser){
+	var version=browser.versions;
+	var u= navigator.userAgent;
+	if(version.mobile==true){
+		win.location.href="https://ming0115.github.io/resume.github.io/wap/index.html";
+		return;
+	}
+})(window,browser);
+</script>
 </head>
 <body>
 
