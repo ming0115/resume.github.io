@@ -1,0 +1,144 @@
+/*! created by yangming */
+body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,pre,form,input,textarea,p,hr,thead,tbody,tfoot,th,td{margin:0;padding:0;}
+ul,ol{list-style:none;}
+a{text-decoration:none;}
+html{-ms-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none;}
+body{line-height:1.5;}
+body,button,input,select,textarea{font-family:'helvetica neue',tahoma,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;}
+b,strong{font-weight:bold;}
+i,em{font-style:normal;}
+table{border-collapse:collapse;border-spacing:0;}
+table th,table td{border:1px solid #ddd;padding:5px;}
+table th{font-weight:inherit;border-bottom-width:2px;border-bottom-color:#ccc;}
+img{border:0 none;width:auto\9;max-width:100%;vertical-align:top;}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;vertical-align:baseline;}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;}
+button[disabled],input[disabled]{cursor:default;}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
+input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+input{line-height:normal!important;}
+}
+select[size],select[multiple],select[size][multiple]{border:1px solid #AAA;padding:0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block;}
+audio,canvas,video,progress{display:inline-block;}
+
+a,button,input,optgroup,select,textarea {-webkit-tap-highlight-color:rgba(0,0,0,0);}
+a, img {-webkit-touch-callout: none;}/*禁止长按链接与图片弹出菜单*/
+body{-webkit-overflow-scrolling:touch;}/*流畅滚动*/
+
+html,body{height:100%;overflow:hidden;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+figure{margin:0;}
+img{width:100%;}
+.doc .mt1{margin-top: 1rem;}
+.doc .mtdot5{margin-top: 0.5rem;}
+.doc{width:100%;max-width:6.4rem;margin:0px auto;position:relative;height:100%;overflow:hidden;}
+.pannel{height: 100%;background:#fff;}
+h2{font-size: 0.7rem;text-align:center;padding: 2.0rem 0 0;}
+h3{font-size: 0.6rem;line-height: 0.8rem;text-align:center;padding: 1rem 0 0;height: 0.8rem;}
+.pannel p{font-size: 0.48rem;line-height: 0.8rem;height: 0.8rem;text-align:center;margin:0.8rem 0 0;}
+.pannel .txts{margin:0.5rem auto 0;width: 5.6rem;}
+.pannel .txts li{color:#000;}
+.info{line-height: 0.8rem;height:0.8rem;font-size: 0.40rem;}
+.skill{line-height: 0.44rem;font-size: 0.26rem;}
+.work{line-height: 0.6rem;}
+label{font-size: 0.3rem;line-height: 0.6rem;height: 0.6rem;display:block;width: 5rem;margin:0 auto;}
+.works{width: 5.6rem;margin:0 auto 0.3rem;}
+.works dt{height: 0.5rem;line-height: 0.5rem;}
+.works .desc{display: block;line-height: 0.5rem;}
+.works .btn-look{display: block;line-height: 0.5rem;color:#a00;}
+
+
+.btn-view{display:block;width:3.90rem;height: 2.34rem;background:url(imgs/btn-view.b77e.png) no-repeat;background-size:contain;position:absolute;z-index:10;margin-left: -1.95rem;left: 50%;bottom:1.5rem;}
+
+.btn-next{width: 0.78rem;height: 0.32rem;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE4AAAAgCAYAAAC8VE43AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjlFRTQxQjM2MkM4MTFFN0E0NTlBNzA5MUZCRDFGOUMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjlFRTQxQjQ2MkM4MTFFN0E0NTlBNzA5MUZCRDFGOUMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2OUVFNDFCMTYyQzgxMUU3QTQ1OUE3MDkxRkJEMUY5QyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2OUVFNDFCMjYyQzgxMUU3QTQ1OUE3MDkxRkJEMUY5QyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrBa1GEAAALNSURBVHja7JpNSFRRFMfflCVlgkRopSvTBGuRICIqBUEIgS2EWrQRBKFFiyAR2rlyGYQurEUhiFsFF0lBRGkWSEjiRpOEFmlQVGj5VeP/wHk0DTNv3r333Pue2oHfzuFef+/NvedjvGQy6aWzS+MgaAcvwSYzAbrAkfQ/zuTlH0d7RFwzmCcfWVgGjf/F/Y180B8gLJVFsD+suEQmUYlEImgzR8EVcAGcBL/AM/AArMVIWgkYAfUKnzkBlnxxgaHwxlWCQZaT6YlNZTorIooqsBDyTfP5AfZJf1Xb+c3KtfgTUBCxtCbwRVEacV/6jLsE/ihs4DV/naOIqyEfcDrfQam0uKcaG5kFZY6l3VZ8wKm02UhHFjQ3s8hnje2gm7BPc4/EvbBnv6q45wab+gxqLUor4JtTd389lETYEnfLYGP+bXXRgrRi8EZzT1vghmq2oSqOUoxPhvIohWkVlHba4AhZAS25FpBKR1oNDt7Up9whIK1RM93wS6u6MItIllxtXBibyCP5dyJIN4g5cCrsQtK1KpVaPw3lEXezHcqW0o1JcExlMRtFPtWo3wTkDYC8kOlGr8E6w+CQ6qttqztSw8WwqbzRHP/UYcN0oze14xEHcX7R/0FA3gtQJJxu0Fe60+QGst2Po7bSjIC8aXA8Ld14b5D6XDO9ul00MqmgfyUgj/KycsN04ys4L5EouuoAU+nzWEDeskG6QbVxtVSG7bJ1TsOQIQF5Orzl7q23E8V53EHtcyxtDBRKF8JRDWu6HUl7CA7YaLtEOeW6KVDfBtGtUX3sCHEU18GGsLBNnoFYjTjMVS+DVSFp1NtrdtGHj8tAuoFzLBNpH8E5VwOMOE3yz/AQR0faFFcp3l4U53FBT+nK75DC1nkukO96zhjX346c5a7HVhZh1PN7BCoims9a+e2IZJRw/7+SOyTUbXkHxvki8KIUFxTbAgwA9EKOAQXkPw4AAAAASUVORK5CYII=) no-repeat;background-size:contain;position:fixed;z-index:999;bottom: 0.4rem;left: 50%;margin-left: -0.39rem;-webkit-animation:updown 1s infinite;animation:updown 1s infinite;}
+.hide{display:none;}
+
+@-webkit-keyframes updown{
+	0%,100%{
+		-webkit-transform:translate(0,0.4rem);
+	}
+	50%{
+		-webkit-transform:translate(0,0.1rem);
+	}
+}
+@keyframes updown{
+	0%,100%{
+		transform:translate(0,0.4rem);
+	}
+	50%{
+		transform:translate(0,0.1rem);
+	}
+}
+
+.animated { animation-duration: 1s; animation-fill-mode: both; visibility: hidden; }
+.play .animated { visibility: visible; }
+.delay0d5s { animation-delay: 0.5s; }
+.delay1s { animation-delay: 1s; }
+.delay1d5s { animation-delay: 1.5s; }
+.delay2s { animation-delay: 2s; }
+.delay2d5s { animation-delay: 2.5s; }
+.dur0d5s { animation-duration: 0.5s; }
+.dur1d5s { animation-duration: 1.5s; }
+.dur2s { animation-duration: 2s; }
+.dur3s { animation-duration: 3s; }
+.infinite { animation-iteration-count: infinite; }
+@-webkit-keyframes fadeInLeft {
+  from { opacity: 0; transform: translate3d(-100%, 0, 0); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translate3d(-100%, 0, 0); }
+  to { opacity: 1; transform: none; }
+}
+.play .fadeInLeft { animation-name: fadeInLeft; }
+@-webkit-keyframes fadeInRight {
+  from { opacity: 0; transform: translate3d(100%, 0, 0); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translate3d(100%, 0, 0); }
+  to { opacity: 1; transform: none; }
+}
+.play .fadeInRight { animation-name: fadeInRight; }
+@-webkit-keyframes zoomIn {
+  from { opacity: 0; transform: scale3d(.3, .3, .3); }
+  50% { opacity: 1; }
+}
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale3d(.3, .3, .3); }
+  50% { opacity: 1; }
+}
+.play .zoomIn { animation-name: zoomIn; }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translate3d(0, 100%, 0); }
+  to { opacity: 1; transform: none; }
+}
+.play .fadeInUp { animation-name: fadeInUp; }
+@keyframes flip {
+  from { transform: perspective(400px) rotate3d(0, 1, 0, -360deg); animation-timing-function: ease-out; opacity: 0; }
+  40% { transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg); animation-timing-function: ease-out; opacity: 1; }
+  50% { transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg); animation-timing-function: ease-in; }
+  80% { transform: perspective(400px) scale3d(.95, .95, .95); animation-timing-function: ease-in; }
+  to { transform: perspective(400px); animation-timing-function: ease-in; }
+}
+.play .flip { -webkit-backface-visibility: visible; backface-visibility: visible; animation-name: flip; }
+@keyframes lightSpeedIn {
+  from { transform: translate3d(100%, 0, 0) skewX(-30deg); opacity: 0; }
+  60% { transform: skewX(20deg); opacity: 1; }
+  80% { transform: skewX(-5deg); opacity: 1; }
+  to { transform: none; opacity: 1; }
+}
+.play .lightSpeedIn { animation-name: lightSpeedIn; animation-timing-function: ease-out; }
+@keyframes pulse {
+  from { transform: scale3d(1, 1, 1); }
+  50% { transform: scale3d(1.05, 1.05, 1.05); }
+  to { transform: scale3d(1, 1, 1); }
+}
+.play .pulse { animation-name: pulse; }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.play .fadeIn { animation-name: fadeIn; }
